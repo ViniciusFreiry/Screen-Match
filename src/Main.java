@@ -1,10 +1,12 @@
+import br.com.screenmatch.template.Movie;
+
 public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie();
 
-        myMovie.name = "O Poderoso Chefão";
-        myMovie.releaseYear = 1970;
-        myMovie.durationInMinutes = 180;
+        myMovie.setName("O Poderoso Chefão");
+        myMovie.setReleaseYear(1970);
+        myMovie.setDurationInMinutes(180);
 
         myMovie.viewSpecs();
         myMovie.addReview(8);
