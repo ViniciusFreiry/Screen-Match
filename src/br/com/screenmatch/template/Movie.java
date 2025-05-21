@@ -1,6 +1,8 @@
 package br.com.screenmatch.template;
 
-public class Movie extends Title {
+import br.com.screenmatch.calcs.Rates;
+
+public class Movie extends Title implements Rates {
     private String director;
 
     public String getDirector() {
@@ -9,5 +11,10 @@ public class Movie extends Title {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    @Override
+    public int getRate() {
+        return (int) getAverageRating() / 2;
     }
 }
