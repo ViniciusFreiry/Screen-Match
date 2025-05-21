@@ -11,9 +11,7 @@ public class Main {
         myMovie.addReview(5);
         myMovie.addReview(10);
 
-        System.out.println(myMovie.totalReview);
-        System.out.println(myMovie.reviewQtd);
-
         System.out.println(myMovie.getAverageRating());
+        System.out.println("Review Quantity: " + myMovie.getReviewQuantity());
     }
 }

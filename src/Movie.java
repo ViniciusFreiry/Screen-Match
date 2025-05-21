@@ -2,9 +2,13 @@ public class Movie {
     String name;
     int releaseYear;
     boolean includedInThePlan;
-    double totalReview;
-    int reviewQtd;
+    private double totalReview;
+    private int reviewQuantity;
     int durationInMinutes;
+
+    int getReviewQuantity() {
+        return reviewQuantity;
+    }
 
     void viewSpecs() {
         System.out.println("Movie Name: " + name);
@@ -13,10 +17,10 @@ public class Movie {
 
     void addReview(double newReview) {
         totalReview += newReview;
-        reviewQtd++;
+        reviewQuantity++;
     }
 
     double getAverageRating() {
-        return totalReview / reviewQtd;
+        return totalReview / reviewQuantity;
     }
 }
