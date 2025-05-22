@@ -5,6 +5,9 @@ import br.com.screenmatch.template.Serie;
 import br.com.screenmatch.template.Title;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class MainWithList {
     public static void main(String[] args) {
@@ -16,7 +19,7 @@ public class MainWithList {
         anotherMovie.addReview(10);
         Serie mySerie = new Serie("Lost", 2000);
 
-        ArrayList<Title> list = new ArrayList<>();
+        List<Title> list = new ArrayList<>();
         list.add(anotherMovie);
         list.add(myMovie);
         list.add(otherMovie);
@@ -29,5 +32,20 @@ public class MainWithList {
                 System.out.println("Stars: " + movie.getRate() + "\n");
             }
         }
+
+        List<String> searchForArtist = new ArrayList<>();
+        searchForArtist.add("Arnold Schwarzenegger");
+        searchForArtist.add("Tom Cruise");
+        searchForArtist.add("Adam Sandler");
+        System.out.println(searchForArtist);
+
+        Collections.sort(searchForArtist);
+        System.out.println(searchForArtist);
+
+        Collections.sort(list);
+        System.out.println(list);
+
+        list.sort(Comparator.comparing(Title::getReleaseYear));
+        System.out.println(list);
     }
 }
