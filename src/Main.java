@@ -4,6 +4,10 @@ import br.com.screenmatch.template.Episode;
 import br.com.screenmatch.template.Movie;
 import br.com.screenmatch.template.Serie;
 
+import java.io.File;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie();
@@ -51,5 +55,18 @@ public class Main {
         episode.setSerie(mySerie);
         episode.setTotalViews(325);
         filter.filter(episode);
+
+        Movie anotherMovie = new Movie();
+        anotherMovie.setDurationInMinutes(200);
+        anotherMovie.setName("Dogville");
+        anotherMovie.setReleaseYear(2003);
+        anotherMovie.addReview(10);
+
+        ArrayList<Movie> moviesList = new ArrayList<>();
+        moviesList.add(anotherMovie);
+        moviesList.add(myMovie);
+        moviesList.add(otherMovie);
+        System.out.println("Size of List: " + moviesList.size());
+        System.out.println("First Movie: " + moviesList.get(0).getName());
     }
 }
