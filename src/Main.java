@@ -10,10 +10,8 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Movie myMovie = new Movie();
+        Movie myMovie = new Movie("O Poderoso Chefão", 1970);
 
-        myMovie.setName("O Poderoso Chefão");
-        myMovie.setReleaseYear(1970);
         myMovie.setDurationInMinutes(180);
 
         myMovie.viewSpecs();
@@ -24,9 +22,7 @@ public class Main {
         System.out.println(myMovie.getAverageRating());
         System.out.println("Review Quantity: " + myMovie.getReviewQuantity());
 
-        Serie mySerie = new Serie();
-        mySerie.setName("Lost");
-        mySerie.setReleaseYear(2000);
+        Serie mySerie = new Serie("Lost", 2000);
         mySerie.viewSpecs();
 
         mySerie.setSeasons(10);
@@ -37,10 +33,8 @@ public class Main {
         TimeCalculator timeCalculator = new TimeCalculator();
         timeCalculator.addTime(myMovie);
 
-        Movie otherMovie = new Movie();
+        Movie otherMovie = new Movie("Avatar", 2023);
 
-        otherMovie.setName("Avatar");
-        otherMovie.setReleaseYear(2023);
         otherMovie.setDurationInMinutes(200);
         timeCalculator.addTime(otherMovie);
 
@@ -56,10 +50,8 @@ public class Main {
         episode.setTotalViews(325);
         filter.filter(episode);
 
-        Movie anotherMovie = new Movie();
+        Movie anotherMovie = new Movie("Dogville", 2003);
         anotherMovie.setDurationInMinutes(200);
-        anotherMovie.setName("Dogville");
-        anotherMovie.setReleaseYear(2003);
         anotherMovie.addReview(10);
 
         ArrayList<Movie> moviesList = new ArrayList<>();

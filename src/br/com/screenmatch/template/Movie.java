@@ -5,6 +5,10 @@ import br.com.screenmatch.calcs.Rates;
 public class Movie extends Title implements Rates {
     private String director;
 
+    public Movie(String name, int releaseYear) {
+        super(name, releaseYear);
+    }
+
     public String getDirector() {
         return director;
     }
