@@ -1,11 +1,11 @@
+package br.com.screenmatch.main;
+
 import br.com.screenmatch.calcs.RecommendationFilter;
 import br.com.screenmatch.calcs.TimeCalculator;
 import br.com.screenmatch.template.Episode;
 import br.com.screenmatch.template.Movie;
 import br.com.screenmatch.template.Serie;
 
-import java.io.File;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Main {
